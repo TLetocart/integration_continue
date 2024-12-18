@@ -4,11 +4,11 @@
 import sys
 import os
 
-# Ajout du répertoire parent pour importer main.py
+# Ajouter le répertoire parent pour importer main.py
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from fastapi.testclient import TestClient
-from main import app
+from main import app  # Importation de app depuis main.py
 
 client = TestClient(app)
 
@@ -27,4 +27,5 @@ def test_filtered_data():
     response = client.get("/filtered-data?limit=2")
     assert response.status_code == 200
     assert isinstance(response.json(), list)
+
 
