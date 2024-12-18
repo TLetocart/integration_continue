@@ -1,5 +1,7 @@
 
-# ---------------------- Test Github Actions -----------------
+# ---------------------- Test Github Actions - Vérifie les routes et Python  -----------------
+
+# Test GET / POST / Unitaires / PUT / Delete
 
 import sys
 import os
